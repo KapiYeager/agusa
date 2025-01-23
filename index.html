@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background: linear-gradient(90deg, #4b6cb7, #182848);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            overflow: hidden;
+        }
+
+        header img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            opacity: 0;
+            transform: translateX(100px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        header h1.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        section {
+            padding: 120px 80px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+            position: relative;
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        section h2 {
+            font-size: 2em;
+            color: #182848;
+            margin-bottom: 20px;
+        }
+
+        .experience ul, .likes ul, .projects ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .experience li, .likes li, .projects li {
+            background: #f4f4f4;
+            margin: 10px 0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .testimonial {
+            background: #f4f4f4;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .testimonial img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .testimonial p {
+            font-style: italic;
+        }
+
+        .contact {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            background: #182848;
+            color: white;
+            padding: 80px 20px;
+            border-radius: 8px;
+        }
+
+        .contact img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+
+        .contact div {
+            text-align: left;
+        }
+
+        footer {
+            text-align: center;
+            background: #4b6cb7;
+            color: white;
+            padding: 20px;
+        }
+
+        /* Animasi akar */
+        .root-line {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #4b6cb7;
+            animation: grow-line 2s ease-out forwards;
+        }
+
+        @keyframes grow-line {
+            to {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="Kapi.jpeg" alt="Foto Anda">
+    <h1 id="name">Kahfi Chandra Ariza</h1>
+    <p>Selamat datang di portofolio saya. Izinkan saya berbagi cerita dengan Anda.</p>
+</header>
+
+<section class="experience">
+    <h2>Pengalaman</h2>
+    <ul>
+        <li><strong>Fotografer:</strong> Sering mempotret segala hal yg menarik untuk di jadikan dokimentasi.</li>
+        <li><strong>Kompetisi Daerah Badminton:</strong> Mengikuti kompetisi Badminton di Daerah sekitar.</li>
+        <li><strong>Osis:</strong> Menjalani program program yg di buat sekolah atau dari pihak osis sendiri.</li>
+    </ul>
+    <div class="root-line"></div>
+</section>
+
+<section class="likes">
+    <h2>Kesukaan</h2>
+    <ul>
+        <li><strong>Olahraga:</strong> Suka melakukan olahraga fisik.</li>
+        <li><strong>Animasi 2D:</strong> Saya suka memotret sesuatu yg saya anggap indah.</li>
+    </ul>
+    <div class="root-line"></div>
+</section>
+
+<section class="projects">
+    <h2>Proyek</h2>
+    <ul>
+        <li><strong>Designer:</strong> Membuat Desain poster pemilihan ketua osis.</li>
+        <li><strong> :</strong> .</li>
+        <li><strong>Proyek 3:</strong> .</li>
+    </ul>
+    <div class="root-line"></div>
+</section>
+
+<section class="testimonials">
+    <h2>Testimoni</h2>
+    <div class="testimonial">
+        <img src="prima.jpeg" alt="Orang 1">
+        <p>"Baik dan dapat di andalkan."</p>
+        <p><strong>Prima</strong></p>
+    </div>
+    <div class="testimonial">
+        <img src="fikri.jpeg" alt="Orang 2">
+        <p>"Ramah dan menjaga kebersihan."</p>
+        <p><strong>Fikri</strong></p>
+    </div>
+    <div class="testimonial">
+        <img src="Ardan.jpeg" alt="Orang 3">
+        <p>"Dapat di percaya."</p>
+        <p><strong>Ardan</strong></p>
+    </div>
+    <div class="root-line"></div>
+</section>
+
+<section class="contact">
+    <img src="Kapi.jpeg" alt="Foto Anda">
+    <div>
+        <h2>Hubungi Saya</h2>
+        <p><strong>Email:</strong> kahfichandraariza@gmail.com</p>
+        <p><strong>Telepon:</strong> +62 878-7851-1525</p>
+        <p><strong>Alamat:</strong> Kelapa Dua Wetan, Ciracas Jl Raya PKP.</p>
+    </div>
+    <div class="root-line"></div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Nama Anda. Semua hak dilindungi.</p>
+</footer>
+
+<script>
+    const sections = document.querySelectorAll('section');
+    const nameElement = document.getElementById('name');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, {
+        threshold: 0.1,
+    });
+
+    sections.forEach((section) => {
+        observer.observe(section);
+    });
+
+    // Animasi khusus untuk nama di header
+    const nameObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                nameElement.classList.add('visible');
+            }
+        });
+    }, {
+        threshold: 0.1,
+    });
+
+    nameObserver.observe(nameElement);
+</script>
+
+</body>
+</html>
